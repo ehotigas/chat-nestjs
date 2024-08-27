@@ -1,10 +1,14 @@
-import { AppGateway } from './app.gateway';
+import { NotificacaoModule } from './NotificacaoModule/NotificacaoModule';
+import { MessageModule } from './MessageModule/MessageModule';
 import { Module } from '@nestjs/common';
 
 
 @Module({
-  imports: [],
+  imports: [
+    MessageModule,
+    NotificacaoModule
+  ],
   controllers: [],
-  providers: [AppGateway],
+  providers: [],
 })
 export class AppModule {}
